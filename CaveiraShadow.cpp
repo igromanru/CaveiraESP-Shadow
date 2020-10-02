@@ -62,8 +62,8 @@ uintptr_t R6::Functions::RoundManager()
 uintptr_t R6::Functions::EntityList()
 {
     uintptr_t encrypted = memory->Read<uintptr_t>(hProcess, GameManager() + Config::Offsets::EntityList::pChain);
-    encrypted = ((encrypted ^ Config::Decryption::EntityList::pDecryption1) + Config::Decryption::EntityList::pDecryption2) ^ Config::Decryption::EntityList::pDecryption3;
-
+    encrypted = (encrypted ^ Config::Decryption::EntityList::pDecryption1) + Config::Decryption::EntityList::pDecryption2;
+    encrypted = (encrypted << Config::Decryption::EntityList::pDecryption3) ^ (encrypted >> Config::Decryption::EntityList::pDecryption4);
     return encrypted;
 }
 

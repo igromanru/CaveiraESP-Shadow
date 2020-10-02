@@ -2,12 +2,12 @@ namespace Config {
 
 	namespace Offsets {
 
-		constexpr auto pGameManager = 0x5D8E1B8;
-		constexpr auto pRoundManager = 0x71140D8;
-		constexpr auto pVTable = 0x5326930;
+		constexpr auto pGameManager = 0x5D825F8;
+		constexpr auto pRoundManager = 0x70FEF08;
+		constexpr auto pVTable = 0x530FE80; // VTMarker
 
 		namespace EntityList {
-			constexpr auto pChain = 0x108;
+			constexpr auto pChain = 0xE0;
 			constexpr auto pObject = 0x8;
 			constexpr auto pPawn = 0x50;
 
@@ -38,9 +38,10 @@ namespace Config {
 	namespace Decryption {
 
 		namespace EntityList {
-			constexpr auto pDecryption1 = 0xEC2581B1EC5CC398;
-			constexpr auto pDecryption2 = 0x71B65F65B607DE6F;
-			constexpr auto pDecryption3 = 0xC6554B199E494084;
+			constexpr auto pDecryption1 = 0x35;
+			constexpr auto pDecryption2 = 0xB153062A46B96BA5;
+			constexpr auto pDecryption3 = 0x14;
+			constexpr auto pDecryption4 = 0x2C;
 
 		}
 	}
